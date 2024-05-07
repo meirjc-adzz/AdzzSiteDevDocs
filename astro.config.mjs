@@ -7,7 +7,7 @@ export default defineConfig({
     starlight({
       title: 'Adzz Dev Docs',
       logo: {
-        src: './src/assets/AdzzFavicon.png',
+        src: './src/assets/topNavLogo.png',
       },
       social: {
         github: 'https://github.com/withastro/starlight',
@@ -40,5 +40,3 @@ export default defineConfig({
     }),
   ],
 })
-
-// /Users/meirjc/Projects/ADZZ/Startlight-Adzz-Docs/src/content/docs/documentation-contribute/01-theme-and-style.md

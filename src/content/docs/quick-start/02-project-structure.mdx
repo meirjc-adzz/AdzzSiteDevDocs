@@ -2,8 +2,11 @@
 title: Project Structure
 description: An overview of the Adzz project directory structure.
 ---
+import { FileTree } from '@astrojs/starlight/components';
 
-This page provides a detailed look at the structure of the Adzz project repository. Understanding this structure will help you navigate and manage the development environment more effectively.
+This page provides a detailed look at the structure of the Adzz project repository. 
+
+Understanding this structure will help you navigate and manage the development environment more effectively.
 
 ## Top-Level Overview
 
@@ -16,33 +19,40 @@ This page provides a detailed look at the structure of the Adzz project reposito
 
 The `src` directory contains the main source files for the project, organized into subdirectories:
 
-import { FileTree } from '@astrojs/starlight/components';
-
 <FileTree>
-- **README.md**                     # Overview and general information.
-- **astro.config.mjs**              # Configuration for the Astro project.
-- **tsconfig.json**                 # TypeScript configuration.
-- **package.json**                  # Project metadata and dependencies.
-- **pnpm-lock.yaml**                # Lock file for dependencies.
+- README.md  # Project Overview.
+- astro.config.mjs  # Configuration for the Astro project.
+- tsconfig.json  # TypeScript configuration.
+- package.json  # Project metadata and dependencies.
+- pnpm-lock.yaml  # Lock file for dependencies.
 - public
-  - favicon.svg                     # Favicon for the site.
+  - favicon.svg  # Favicon for the site.
 - src
-  - assets
-    - **AdzzFavicon.png**           # Favicon for the Adzz site.
-    - houston.webp                  # Image used across various parts of the site.
-  - content
-    - config.ts                     # Configuration settings for the content.
-    - docs
+  - **assets**  # Static assets used in the project.
+    - topNavLogo.png  # Logo used in the top navigation bar.
+    - houston.webp  # Image used across various parts of the site.
+  - content      
+    - components  # Reusable components documentation.
+    - config.ts  # Configuration settings for the content.
+    - **docs** # Documentation content.
+      - api-documentation  # API/Data fetching details.
+      - documentation-contribute
+        - 01-doc-project-structure.  # Guide on understanding the project structure.
+        - 02-theme-and-style.md  # Instructions on applying themes and styles.
       - guides
-        - example.md                # Markdown guide for specific topics.
-      - **index.mdx**               # Main entry file for the documentation site.
+        - example.md  # Markdown guide for specific topics.
+      - overview  # General overview of the project.
       - quick-start
-        - 01-quick-start.md         # Initial quick-start guide.
+        - 01-quick-start.md  # Initial quick-start guide.
         - 02-project-structure.mdx  # Detailed explanation of the project structure.
       - reference
-        - example.md                # Reference documentation example.
-  - **env.d.ts**                    # Type definitions for environment variables.
+        - example.md  # Reference documentation example.
+      - theme-and-style
+        - theme-settings.mdx  # Configuration settings for the site theme.
+      - **index.mdx**  # Main entry file for the documentation site.
+  - env.d.ts  # Type definitions for environment variables.
 </FileTree>
+
 
 ## Public Directory (`public`)
 

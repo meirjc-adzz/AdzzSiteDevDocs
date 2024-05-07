@@ -1,0 +1,131 @@
+---
+title: Project Structure
+description: Understand the structure of the Adzz documentation project and how to contribute effectively.
+---
+import { Aside, Code } from '@astrojs/starlight/components';
+
+## Understanding the Project Structure
+
+The Adzz Documentation Site is structured to facilitate easy navigation and maintenance. Here, we detail the organization of directories and files, emphasizing how contributors can add or update content.
+
+### Directory Layout
+
+The project is organized into several key directories:
+
+```
+.
+├── public/ # Holds static assets like favicons and images.
+├── src/
+│ ├── assets/ # Contains images and other assets referenced in the docs.
+│ ├── content/
+│ │ ├── components/ # Reusable MDX components.
+│ │ ├── docs/
+│ │ │ ├── api-documentation/ # Detailed API documentation.
+│ │ │ ├── documentation-contribute/ # Guides for contributing to docs.
+│ │ │ ├── guides/ # Step-by-step guides.
+│ │ │ ├── overview/ # Overview of the project.
+│ │ │ ├── quick-start/ # Quick start guides for new contributors.
+│ │ │ ├── reference/ # Reference materials.
+│ │ │ └── theme-and-style/ # Theme and styling guidelines.
+│ │ └── config.ts # Configuration settings for documentation content.
+│ └── env.d.ts # Environment type definitions.
+├── astro.config.mjs # Astro configuration file.
+├── package.json # Project metadata and dependencies.
+└── tsconfig.json # TypeScript configuration.
+```
+<Aside>
+Please note that the project structure may evolve over time. 
+This document serves as a reference for the current layout, but as the project grows, new directories and files will be added.
+</Aside>
+
+
+
+
+
+
+## How to Contribute
+
+### Adding new folders and files
+The project navgation use file based routing. To add a new folder or file, follow these steps:
+- create a new folder or file in the appropriate sub-directory inside `src/content/docs/`.
+- Name the file according to the content it represents. For example, create `product-card.mdx` in the `components/` directory to add a new component documentation.
+- follow Startlight markdown/MDX syntax to add content. each file **must** have a title and description frontmatter.
+- add the new directory to 'astro.config.mjs' in the `sidebar` array to make it accessible in the documentation navigation.
+
+example:
+<Code lang="js" title="astro.config.mjs" code={`
+sidebar: [
+  {
+    label: 'Quick Start', // label for the section
+    autogenerate: { directory: 'quick-start' }, // autogenerate inner links from each file in the directory
+  }, ...]`
+      }/>
+<Aside>
+Remeber that the order of the sidebar array will determine the order of the sections in the documentation navigation, and the order of the files in each section will be determined by the order of the files in the directory.
+</Aside>
+
+### Adding Content
+
+1. **Documentation Files**: All documentation content is located under `src/content/docs/`. To add new content:
+
+   - Create a new `.md` or `.mdx` file in the appropriate sub-directory.
+   - Name the file according to the content it represents. For example, create `user-authentication.mdx` in the `guides/` directory to add a new guide on user authentication.
+
+2. **Assets**: If your documentation requires images, add them to `src/assets/` and reference them using relative paths in your Markdown files.
+
+### Editing Content
+
+- To update existing documentation, navigate to the relevant `.md` or `.mdx` file within the `src/content/docs/` directory and make your changes.
+- Ensure that all links and images are correctly formatted and functional before submitting changes.
+
+### Static and Public Resources
+
+- **Public Directory**: Static assets that are not directly related to documentation content, such as favicons and design assets, should be placed in the `public/` directory.
+- **Assets Directory**: Use `src/assets/` for assets that are referenced directly in the documentation, such as diagrams and screenshots.
+
+### Using the FileTree Component
+
+To visually represent the project structure within the documentation, use the `<FileTree>` component from Starlight. Here’s how to include it:
+
+```markdown
+import { FileTree } from '@astrojs/starlight/components';
+
+<FileTree>
+- **README.md**                     # Overview and general information.
+- **astro.config.mjs**              # Configuration for the Astro project.
+- **package.json**                  # Project metadata and dependencies.
+- **tsconfig.json**                 # TypeScript configuration.
+- public
+  - favicon.svg                     # Favicon for the site.
+- src
+  - assets
+    - **AdzzFavicon.png**           # Favicon for the Adzz site.
+    - houston.webp                  # Image used across various parts of the site.
+  - content
+    - components                    # Reusable components for documentation pages.
+    - config.ts                     # Configuration settings for the content.
+    - docs
+      - api-documentation           # API documentation details.
+      - documentation-contribute
+        - 01-doc-project-structure.md # Guide on understanding the project structure.
+        - 02-theme-and-style.md     # Instructions on applying themes and styles.
+      - guides
+        - example.md                # Markdown guide for specific topics.
+      - **index.mdx**               # Main entry file for the documentation site.
+      - overview                    # General overview of the project.
+      - quick-start
+        - 01-quick-start.md         # Initial quick-start guide.
+        - 02-project-structure.mdx  # Detailed explanation of the project structure.
+      - reference
+        - example.md                # Reference documentation example.
+      - theme-and-style
+        - theme-settings.mdx        # Configuration settings for the site theme.
+  - **env.d.ts**                    # Type definitions for environment variables.
+</FileTree>
+```
+
+### Conclusion
+
+Contributors are encouraged to familiarize themselves with the structure and content placement guidelines detailed above. This ensures that our documentation remains organized and accessible.
+
+For any further questions, please contact the Adzz site documentation team.

@@ -3,14 +3,13 @@ title: Welcome to Adzz Site Dev Docs
 description: Get started with developing the Adzz site and understand our tech stack.
 ---
 
-<!-- # Welcome to Adzz Development -->
-
 Welcome to the Adzz Sit Development Docs!
 This page will help you get up to speed with our tech stack, the project structure, and how to get your development environment running.
 
 ## About the Project
 
 Adzz is designed to streamline advertising operations by providing a robust platform for managing campaigns, analytics, and user engagement.
+
 Our goal is to provide an intuitive and powerful tool for advertisers and marketers.
 
 ## Tech Stack Overview
@@ -31,8 +30,8 @@ Our project utilizes a modern web development stack. Below is an overview of the
 To start working with the Adzz project, you will need to clone our repository. Here’s how you can do it:
 
 ```bash
-git clone https://github.com/adzz/adzz-site.git //Todo: Update the URL
-cd adzz-site
+git clone https://github.com/meirjc-adzz/AdzzSiteDevDocs.git
+cd AdzzSiteDevDocs
 ```
 
 ### Running the Development Server
@@ -48,7 +47,10 @@ This will start the development server, usually accessible via [http://localhost
 
 ## Making Changes and Documentation
 
-We use the Astro Starlight template for our documentation. You can find the documentation in the \`src/content/docs\` directory. To make changes, you can edit the Markdown or MDX files in this directory.
+We use the Astro Starlight template for our documentation. You can find the documentation in the `src/content/docs` directory.
+
+To make changes, you can edit the Markdown or MDX files in this directory.
+
 Please refer to the [Starlight Docs](https://starlight.astro.build/) for more information on how to work with the template.
 
 ## Further Resources
@@ -70,6 +72,10 @@ To ensure you are ready to contribute, please make sure you have completed the f
 ## Need Help?
 
 If you encounter any issues or have questions, please don't hasitate to reach out to the team.
-Welcome aboard, and happy coding!
 
-Andrew, Meir and Nana ❤️
+<center>
+Welcome aboard, and happy coding! 🚀
+<br/>
+Andrew, Meir and Nana<br/>
+Adzz Site Development Team ❤️
+</center>
