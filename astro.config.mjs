@@ -18,6 +18,10 @@ export default defineConfig({
           autogenerate: { directory: 'quick-start' },
         },
         {
+          label: 'Theme and Style',
+          autogenerate: { directory: 'theme-and-style' },
+        },
+        {
           label: 'Guides',
           items: [
             // Each item here is one entry in the navigation menu.
@@ -28,7 +32,13 @@ export default defineConfig({
           label: 'Reference',
           autogenerate: { directory: 'reference' },
         },
+        {
+          label: 'Documentation Contribution',
+          autogenerate: { directory: 'documentation-contribute' },
+        },
       ],
     }),
   ],
 })
+
+// /Users/meirjc/Projects/ADZZ/Startlight-Adzz-Docs/src/content/docs/documentation-contribute/01-theme-and-style.md
