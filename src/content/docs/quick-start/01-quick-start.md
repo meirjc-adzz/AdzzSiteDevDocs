@@ -44,7 +44,7 @@ pnpm install
 pnpm dev
 ```
 
-This will start the development server, usually accessible via \`http://localhost:3000\`. You can now begin to make changes and see them reflected in real-time.
+This will start the development server, usually accessible via [http://localhost:4321](http://localhost:4321). You can now begin to make changes and see them reflected in real-time.
 
 ## Making Changes and Documentation
 
